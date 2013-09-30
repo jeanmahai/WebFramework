@@ -58,12 +58,22 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\date.prototype.format.js" />
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\function.prototype.bind.js" />
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\string.format.js" />
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\string.prototy.trim.js" />
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\window.cancelRequestAnimationFrame.js" />
+    <Content Include="WebResource\JavaScript\JavaScriptExtend\window.requestAnimationFrame.js" />
+    <Content Include="WebResource\JavaScript\JqueryExtend\jcountdown.1.0.js" />
+    <Content Include="WebResource\JavaScript\JqueryExtend\jtemplate.1.0.js" />
     <Content Include="WebResource\JavaScript\JqueryUI\1.10.3\jquery-ui-1.10.3.custom.js" />
     <Content Include="WebResource\JavaScript\JqueryUI\1.10.3\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="WebResource\JavaScript\Jquery\1.10.2\jquery-1.10.2.js" />
     <Content Include="WebResource\JavaScript\Jquery\1.10.2\jquery-1.10.2.min.js" />
     <Content Include="WebResource\JavaScript\Jquery\2.0.3\jquery-2.0.3.js" />
     <Content Include="WebResource\JavaScript\Jquery\2.0.3\jquery-2.0.3.min.js" />
+    <Content Include="WebResource\JavaScript\Tools\json2.js" />
+    <Content Include="WebResource\Style\global.css" />
     <Content Include="WebResource\Style\ui-lightness\images\animated-overlay.gif" />
     <Content Include="WebResource\Style\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="WebResource\Style\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -86,6 +96,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Examples\" />
     <Folder Include="WebResource\Image\" />
   </ItemGroup>
   <ItemGroup>
