@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>颜色</title>
+    <style type="text/css">
+        div
+        {
+            width: 100px;
+            height: 100px;
+        }
+        .gray
+        {
+            background-color: gray;
+        }
+        .linear-gradient
+        {
+            /*设置背景色*/
+            background-color: red;
+            /*支持filter的浏览器*/
+            filter: alpha(opacity=1 style=1 startX=50 startY=0 finishX=50 finishY=100);
+            /*IE*/
+            -ms-filter:alpha(opacity=1 style=1 startX=50 startY=0 finishX=50 finishY=100);
+            /*FF*/
+            background: -moz-linear-gradient(top, red, blue);
+            /*webkit*/
+            background: -webkit-linear-gradient(top, red, blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="gray">
+    </div>
+    <div class="linear-gradient">
+    </div>
+</body>
+</html>

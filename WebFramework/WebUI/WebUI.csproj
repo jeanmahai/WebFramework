@@ -51,6 +51,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\Circle-1.htm" />
+    <Content Include="Examples\Color.htm" />
+    <Content Include="Examples\css-index.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -96,7 +99,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Examples\" />
     <Folder Include="WebResource\Image\" />
   </ItemGroup>
   <ItemGroup>
