@@ -51,9 +51,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Examples\2D-transform.htm" />
     <Content Include="Examples\Circle-1.htm" />
-    <Content Include="Examples\Color.htm" />
+    <Content Include="Examples\3D-transform.htm" />
+    <Content Include="Examples\gradient.htm" />
     <Content Include="Examples\css-index.txt" />
+    <Content Include="Examples\transition.htm" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
