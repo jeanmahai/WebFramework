@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../WebResource/JavaScript/Tools/Tween.js" type="text/javascript"></script>
+    <script src="../WebResource/JavaScript/JavaScriptExtend/window.requestAnimationFrame.js"
+        type="text/javascript"></script>
+</head>
+    <body>
+        <div id="div1" style="width: 100px;height: 100px;border: solid 1px black;position: absolute;"></div>
+        <script type="text/javascript">
+            var div1 = document.getElementById("div1");
+
+            var origialPosition = { x: 0, y: 0 };
+            var targetPosition = { x: 100, y: 100 };
+            var tween1 = new TWEEN.Tween({x:50,y:0})
+                .to({x:400,y:100}, 2000)
+                .easing(TWEEN.Easing.Exponential.InOut)
+                .onUpdate(function () {
+                    div1.style.left = this.x + "px";
+                    div1.style.top = this.y + "px";
+                })
+                .start();
+            
+            function loop() {
+                requestAnimationFrame(loop);
+                TWEEN.update();
+            }
+
+            loop();
+        </script>
+    </body>
+</html>

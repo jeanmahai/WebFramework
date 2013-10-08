@@ -55,8 +55,10 @@
     <Content Include="Examples\Circle-1.htm" />
     <Content Include="Examples\3D-transform.htm" />
     <Content Include="Examples\gradient.htm" />
-    <Content Include="Examples\css-index.txt" />
+    <Content Include="Examples\tween.htm" />
+    <Content Include="readme\css.txt" />
     <Content Include="Examples\transition.htm" />
+    <Content Include="readme\svg.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -79,6 +81,8 @@
     <Content Include="WebResource\JavaScript\Jquery\2.0.3\jquery-2.0.3.js" />
     <Content Include="WebResource\JavaScript\Jquery\2.0.3\jquery-2.0.3.min.js" />
     <Content Include="WebResource\JavaScript\Tools\json2.js" />
+    <Content Include="WebResource\JavaScript\Tools\Tween.js" />
+    <Content Include="WebResource\JavaScript\Tools\tween.min.js" />
     <Content Include="WebResource\Style\global.css" />
     <Content Include="WebResource\Style\ui-lightness\images\animated-overlay.gif" />
     <Content Include="WebResource\Style\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
