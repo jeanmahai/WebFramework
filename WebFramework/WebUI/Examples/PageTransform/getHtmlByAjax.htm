@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../../WebResource/JavaScript/JavaScriptExtend/window.requestAnimationFrame.js"
+        type="text/javascript"></script>
+    <script src="../../WebResource/JavaScript/JavaScriptExtend/window.cancelRequestAnimationFrame.js"
+        type="text/javascript"></script>
+    <script src="../../WebResource/JavaScript/Jquery/2.0.3/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../../WebResource/JavaScript/Tools/tween.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div>
+        <button onclick="getPage1()">
+            get page1</button>
+        <button onclick="getPage2()">
+            get page2</button>
+        <button onclick="getPage1_1()">
+            get page1 (effect1)</button></div>
+    <div id="content">
+    </div>
+    <script type="text/javascript">
+        var timer,
+            domContent=$("#content");
+
+        function getPage1() {
+            $.get("Page1.htm", function (result) {
+                $("#content").html(result);
+            });
+        }
+        function getPage2() {
+            $.get("Page2.htm", function (result) {
+                $("#content").html(result);
+            });
+        }
+        function getPage1_1() {
+            $.get("Page1.htm", function (result) {
+                var domResult = $(result);
+                domResult.css("opacity", 0);
+                domContent.html(domResult);
+                new TWEEN.Tween().to({ opacity: 1 }, 2000).onUpdate(function () {
+                    domResult.css("opacity", this.opacity);
+                }).start();
+                function loop() {
+                    timer = requestAnimationFrame(loop);
+                    if (domResult.css("opacity") === 1 && timer) {
+                        cancelRequestAnimationFrame(timer);
+                    }
+                }
+
+                loop();
+            });
+        }
+    </script>
+</body>
+</html>

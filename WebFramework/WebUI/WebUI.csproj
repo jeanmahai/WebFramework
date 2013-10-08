@@ -54,7 +54,10 @@
     <Content Include="Examples\2D-transform.htm" />
     <Content Include="Examples\Circle-1.htm" />
     <Content Include="Examples\3D-transform.htm" />
+    <Content Include="Examples\PageTransform\Page2.htm" />
+    <Content Include="Examples\PageTransform\getHtmlByAjax.htm" />
     <Content Include="Examples\gradient.htm" />
+    <Content Include="Examples\PageTransform\Page1.htm" />
     <Content Include="Examples\tween.htm" />
     <Content Include="readme\css.txt" />
     <Content Include="Examples\transition.htm" />
