@@ -38,17 +38,22 @@
                 var domResult = $(result);
                 domResult.css("opacity", 0);
                 domContent.html(domResult);
+                /*
                 new TWEEN.Tween().to({ opacity: 1 }, 2000).onUpdate(function () {
-                    domResult.css("opacity", this.opacity);
+                domResult.css("opacity", this.opacity);
                 }).start();
                 function loop() {
-                    timer = requestAnimationFrame(loop);
-                    if (domResult.css("opacity") === 1 && timer) {
-                        cancelRequestAnimationFrame(timer);
-                    }
+                timer = requestAnimationFrame(loop);
+                if (domResult.css("opacity") === 1 && timer) {
+                cancelRequestAnimationFrame(timer);
                 }
-
+                }
+                
                 loop();
+                */
+                domResult.animate({
+                    opacity:1
+                },3000);
             });
         }
     </script>
