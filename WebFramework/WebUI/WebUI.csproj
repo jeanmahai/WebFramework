@@ -54,6 +54,7 @@
     <Content Include="Examples\2D-transform.htm" />
     <Content Include="Examples\Circle-1.htm" />
     <Content Include="Examples\3D-transform.htm" />
+    <Content Include="Examples\PageTransform\index.htm" />
     <Content Include="Examples\PageTransform\Page2.htm" />
     <Content Include="Examples\PageTransform\getHtmlByAjax.htm" />
     <Content Include="Examples\gradient.htm" />
@@ -77,6 +78,7 @@
     <Content Include="WebResource\JavaScript\JavaScriptExtend\window.requestAnimationFrame.js" />
     <Content Include="WebResource\JavaScript\JqueryExtend\jcountdown.1.0.js" />
     <Content Include="WebResource\JavaScript\JqueryExtend\jtemplate.1.0.js" />
+    <Content Include="WebResource\JavaScript\JqueryExtend\page-transform.js" />
     <Content Include="WebResource\JavaScript\JqueryUI\1.10.3\jquery-ui-1.10.3.custom.js" />
     <Content Include="WebResource\JavaScript\JqueryUI\1.10.3\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="WebResource\JavaScript\Jquery\1.10.2\jquery-1.10.2.js" />
@@ -87,6 +89,7 @@
     <Content Include="WebResource\JavaScript\Tools\Tween.js" />
     <Content Include="WebResource\JavaScript\Tools\tween.min.js" />
     <Content Include="WebResource\Style\global.css" />
+    <Content Include="WebResource\Style\page-transform.css" />
     <Content Include="WebResource\Style\ui-lightness\images\animated-overlay.gif" />
     <Content Include="WebResource\Style\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="WebResource\Style\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
