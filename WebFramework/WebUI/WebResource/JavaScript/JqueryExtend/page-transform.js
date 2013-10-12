@@ -6,19 +6,51 @@
         if (!effect || effect === "") {
             context.html(html);
         }
-        else if (effect === "fade") {
-            context.animate({
-                opacity: 0
-            },{
-				complete:function(){
-					context.empty();
-					context.append(html);
-					context.animate({ opacity: 1 });
-				}
-			});
+        else if(effect==="FadeInFadeOut") {
+            fadeInFadeOut(context,html);
         }
+		else if(effect==="FadeInSlideRight"){
+			fadeInSlide(context,html,"right");
+		}
+		else if(effect==="FadeInSlideLeft"){
+			fadeInSlide(context,html,"left");
+		}
     }
-
+	
+	function fadeInFadeOut(context, html){
+		context.animate({
+			opacity: 0
+		},{
+			complete:function(){
+				context.html(html);
+				context.animate({ opacity: 1 });
+			}
+		});
+	}
+	
+	function fadeInSlide(context,html,direction){
+		context.animate({
+			opacity:0
+		},{
+			complete:function(){
+				$("html").css({overflow:"hidden"});
+				var winWidth=$(window).width();
+				context.css({position:"relative",left:-winWidth,opacity:1});
+				if(direction==="left") context.css({left:winWidth});
+				if(direction==="right") context.css({left:-winWidth});
+				context.html(html);
+				context.animate({
+					left:0
+				},{
+					complete:function(){
+						$("html").css("overflow","");
+						context.css("position","");
+					}
+				});
+			}
+		});
+	}
+	
     function getPage(obj, effect) {
         if (obj.url === "") throw "请提供页面的url地址";
         obj.type = "GET";
