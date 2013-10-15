@@ -24,6 +24,7 @@
 			complete:function(){
 				context.html(html);
 				context.animate({ opacity: 1 });
+				initTagA();
 			}
 		});
 	}
@@ -45,6 +46,7 @@
 					complete:function(){
 						$("html").css("overflow","");
 						context.css("position","");
+						initTagA();
 					}
 				});
 			}
@@ -56,6 +58,7 @@
         obj.type = "GET";
         obj.dataType = "HTML";
         obj.context = $(document.body);
+		obj.cache=false;
         obj.success = function (html) {
             transform(this, html, effect);
         };
