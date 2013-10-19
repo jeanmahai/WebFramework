@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Examples\2D-transform.htm" />
+    <Content Include="Examples\3d-style-1.htm" />
     <Content Include="Examples\Circle-1.htm" />
     <Content Include="Examples\3D-transform.htm" />
     <Content Include="Examples\PageTransform\index.htm" />
