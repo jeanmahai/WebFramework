@@ -1,0 +1,1 @@
+用于兼容html5的 placeholder特性;基于jquery开发
