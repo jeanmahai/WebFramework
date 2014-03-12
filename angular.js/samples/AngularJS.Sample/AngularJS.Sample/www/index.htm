@@ -11,7 +11,7 @@
 <body>
     <div>
         <h6>
-            step 0 : 表达式计算</h6>
+            step 0 : expression</h6>
         <p>1+2={{1+2}}</p>
     </div>
     <div>
@@ -28,12 +28,13 @@
     <div>
         <script type="text/javascript">
             var users = [
-                { name: "jean", sex: "male" },
-                { name: "eva", sex: "female" }
+                { name: "jean", sex: "male", age: 1 },
+                { name: "eva", sex: "female", age: 2 }
             ];
             //$scope 是固定参数,名字都固定
             app.controller("UserCtrl", function ($scope) {
                 $scope.users = users;
+                //$scope.orderField = "name";
             });
         </script>
         <h6>
@@ -51,15 +52,55 @@
     </div>
     <div>
         <h6>
-            step 3: query</h6>
-            <input type="text" ng-model="query" />
+            step 3:client side query|order by</h6>
+        <input type="text" ng-model="query" /><span>search text :{{query}}</span>
+        <br />
+        <select ng-model="orderField">
+            <option value="name">name</option>
+            <option value="sex">sex</option>
+            <option value="age">age</option>
+        </select>
+        <input ng-model="orderField" type="text" />
+        <span>order by:{{orderField}}</span>
         <table ng-controller="UserCtrl">
-            <tr ng-repeat="p in users|filter:query">
+            <tr ng-repeat="p in users|filter:query|orderBy:orderField">
                 <td>
                     {{p.name}}:
                 </td>
                 <td>
                     {{p.sex}}
+                </td>
+                <td>
+                    {{p.age}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <script type="text/javascript">
+            app.controller("RemoteDataCtrl", ["$scope", "$http", function ($scope, $http) {
+
+                $http.jsonp("jsonData/users.js?callback=usersCallback").then(function () {
+                    console.info("sdfd");
+                });
+                window.usersCallback = function (data) {
+                    $scope.users = data;
+                    delete window.usersCallback;
+                };
+            } ]);
+        </script>
+        <h6>
+            step 4:remote data (JSONP)</h6>
+        <table ng-controller="RemoteDataCtrl">
+            <tr ng-repeat="p in users">
+                <td>
+                    {{p.name}}:
+                </td>
+                <td>
+                    {{p.sex}}
+                </td>
+                <td>
+                    {{p.age}}
                 </td>
             </tr>
         </table>
