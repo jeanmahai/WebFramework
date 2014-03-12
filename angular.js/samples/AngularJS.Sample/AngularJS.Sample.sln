@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS.App", "AngularJS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS.Service", "AngularJS.Service\AngularJS.Service.csproj", "{E19EBA2A-86B7-4C1C-AA9B-E43C6E0EE39F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS.Tools", "AngularJS.Tools\AngularJS.Tools.csproj", "{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{E19EBA2A-86B7-4C1C-AA9B-E43C6E0EE39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E19EBA2A-86B7-4C1C-AA9B-E43C6E0EE39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E19EBA2A-86B7-4C1C-AA9B-E43C6E0EE39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
