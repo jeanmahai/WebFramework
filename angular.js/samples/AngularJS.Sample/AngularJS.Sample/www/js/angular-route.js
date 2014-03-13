@@ -512,7 +512,6 @@
           then(function () {
               if (next) {
                   var locals = angular.extend({}, next.resolve),
-                  method,
                   template, templateUrl;
 
                   angular.forEach(locals, function (value, key) {
@@ -531,9 +530,24 @@
                       templateUrl = $sce.getTrustedResourceUrl(templateUrl);
                       if (angular.isDefined(templateUrl)) {
                           next.loadedTemplateUrl = templateUrl;
-                          template = $http.get(templateUrl, { cache: $templateCache }).then(function (response) {
-                              return response.data;
-                          });
+                          //#region 切换view时可以进行跨域切换
+                          var method = next.method;
+                          if (angular.isDefined(method) && method == "jsonp") {
+                              template = $http.jsonp(templateUrl + "?callback=JSON_CALLBACK", {
+                                  cache: $templateCache
+                              }).success(function (res) {
+                              }).then(function (res) {
+                                  return res.data;
+                              });
+                          }
+                          //#endregion
+                          else {
+                              template = $http.get(templateUrl, {
+                                  cache: $templateCache
+                              }).then(function (response) {
+                                  return response.data;
+                              });
+                          }
                       }
                   }
                   if (angular.isDefined(template)) {

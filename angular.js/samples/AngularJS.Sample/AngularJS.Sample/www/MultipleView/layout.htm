@@ -2,20 +2,15 @@
 <html ng-app="ngApp">
 <head>
     <title></title>
+    
+</head>
+<body>
+    <p>原生的$routeProvider不支持跨域切换view,现在进行了如下修改,调用时如果加上method=jsonp将进行跨域调用,修改了angular-route.js 533行代码</p>
+    <div ng-view>
+    </div>
     <script src="../js/angular.js" type="text/javascript"></script>
     <script src="../js/angular-route.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="constroller.js" type="text/javascript"></script>
-</head>
-<body>
-    <div ng-view>
-    </div>
-    <script type="text/javascript">
-//        userControllers.controller("TestCtrl", ["$http", function ($http) {
-//            $http.get("GetView.ashx").success(function (res) {
-//                console.info(res);
-//            });
-//        } ]);
-    </script>
 </body>
 </html>

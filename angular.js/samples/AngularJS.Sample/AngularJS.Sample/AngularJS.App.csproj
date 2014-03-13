@@ -65,6 +65,7 @@
     </Content>
     <Content Include="www\MultipleView\app.js" />
     <Content Include="www\MultipleView\constroller.js" />
+    <Content Include="www\MultipleView\details.js" />
     <Content Include="www\MultipleView\list.js" />
     <Content Include="www\MultipleView\details.htm" />
     <Content Include="www\MultipleView\layout.htm" />

@@ -6,10 +6,11 @@
 ngApp.config(["$routeProvider", function ($routeProvider) {
     //配置导航
     $routeProvider.when("/users", {
-        templateUrl: "list.htm",
-        controller: "UserListCtrl"
+        templateUrl: "list.js",
+        controller: "UserListCtrl",
+        method:"jsonp"
     }).when("/users/:id", {
-        templateUrl: "details.htm",
+        templateUrl: "details.js",
         //templateUrl: "http://localhost:58723/www/MultipleView/GetView.ashx",
         controller: "UserDetailsCtrl",
         method:"jsonp"

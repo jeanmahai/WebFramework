@@ -34,24 +34,30 @@ namespace AngularJS.Tools
 
         private static bool IsOrigion()
         {
-            return CallbackVal.Contains("angular.callbacks._");
+            if (!string.IsNullOrEmpty(CallbackVal))
+                return CallbackVal.Contains("angular.callbacks._");
+            return false;
         }
 
         private static string BuildStr(string str, bool isJson = true)
         {
+            string result;
             if (isJson)
-                return @"
-                    (function(){
-                        var _index=window.angular.callbacks.counter.toString(36)-1;
-                        window.angular.callbacks['_' + _index](" + str + @");
-                    })();
+                result = @"
+(function(){
+var _index=window.angular.callbacks.counter.toString(36)-1;
+window.angular.callbacks['_' + _index](" + str + @");
+})();
                 ";
-            return @"
-                    (function(){
-                        var _index=window.angular.callbacks.counter.toString(36)-1;
-                        window.angular.callbacks['_' + _index]('" + str + @"');
-                    })();
+            else
+                result = @"
+(function(){
+var _index=window.angular.callbacks.counter.toString(36)-1;
+window.angular.callbacks['_' + _index]('" + str + @"');
+})();
                 ";
+            result = result.Replace("\n", "").Replace("\r", "").Replace("\t","");
+            return result;
         }
 
         /// <summary>
@@ -74,7 +80,8 @@ namespace AngularJS.Tools
             }
             return str;
         }
-        public static string FormatJSONP(string file) {
+        public static string FormatJSONP(string file)
+        {
             Response.ContentType = "application/javascript";
             var cnt = File.ReadAllText(file);
             return BuildStr(cnt, false);
