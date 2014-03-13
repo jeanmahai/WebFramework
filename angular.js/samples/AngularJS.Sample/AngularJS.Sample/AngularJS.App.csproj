@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="www\index.htm" />
+    <Content Include="www\jsonData\UsersListHandler.js" />
     <Content Include="www\jsonData\users.js" />
+    <Content Include="www\js\angular-route.js" />
     <Content Include="www\js\angular.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -61,11 +63,20 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="www\MultipleView\app.js" />
+    <Content Include="www\MultipleView\constroller.js" />
+    <Content Include="www\MultipleView\list.js" />
+    <Content Include="www\MultipleView\details.htm" />
+    <Content Include="www\MultipleView\layout.htm" />
+    <Content Include="www\MultipleView\list.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="www\jsonData\Users.ashx.cs">
       <DependentUpon>Users.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="www\MultipleView\GetView.ashx.cs">
+      <DependentUpon>GetView.ashx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +87,9 @@
       <Project>{58D0C8D7-61ED-4D68-9E20-C4BA3EDC1A9B}</Project>
       <Name>AngularJS.Tools</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\MultipleView\GetView.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

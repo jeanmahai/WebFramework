@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.IO;
 
 namespace AngularJS.Tools
 {
@@ -36,6 +37,23 @@ namespace AngularJS.Tools
             return CallbackVal.Contains("angular.callbacks._");
         }
 
+        private static string BuildStr(string str, bool isJson = true)
+        {
+            if (isJson)
+                return @"
+                    (function(){
+                        var _index=window.angular.callbacks.counter.toString(36)-1;
+                        window.angular.callbacks['_' + _index](" + str + @");
+                    })();
+                ";
+            return @"
+                    (function(){
+                        var _index=window.angular.callbacks.counter.toString(36)-1;
+                        window.angular.callbacks['_' + _index]('" + str + @"');
+                    })();
+                ";
+        }
+
         /// <summary>
         /// 格式化JSONP
         /// </summary>
@@ -48,18 +66,18 @@ namespace AngularJS.Tools
             string str;
             if (IsOrigion())
             {
-                str = @"
-                    (function(){
-                        var _index=window.angular.callbacks.counter.toString(36)-1;
-                        window.angular.callbacks['_' + _index](" + json + @");
-                    })();
-                ";
+                str = BuildStr(json);
             }
             else
             {
                 str = CallbackVal + "(" + json + ");";
             }
             return str;
+        }
+        public static string FormatJSONP(string file) {
+            Response.ContentType = "application/javascript";
+            var cnt = File.ReadAllText(file);
+            return BuildStr(cnt, false);
         }
     }
 }
