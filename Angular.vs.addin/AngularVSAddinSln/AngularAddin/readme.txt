@@ -1,0 +1,1 @@
+﻿1. 使用预处理文本模版生成angular view,后缀格式 *.agv.html | *.agv.htm
