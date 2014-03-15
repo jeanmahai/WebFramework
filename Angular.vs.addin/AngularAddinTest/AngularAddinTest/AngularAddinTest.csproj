@@ -52,9 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularView.agv.htm" />
-    <Content Include="AngularView.js">
-		<DependentUpon>AngularView.agv.htm</DependentUpon>
-	</Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

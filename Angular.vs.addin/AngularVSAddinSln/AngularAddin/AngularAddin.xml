@@ -94,6 +94,11 @@
             Gets or sets format provider to be used by ToStringWithCulture method.
             </summary>
         </member>
+        <member name="P:AngularAddin.AngularViewTmpl.Html">
+            <summary>
+            Access the Html parameter of the template.
+            </summary>
+        </member>
         <member name="T:AngularAddin.Connect">
             <summary>The object for implementing an Add-in.</summary>
             <seealso class='IDTExtensibility2' />

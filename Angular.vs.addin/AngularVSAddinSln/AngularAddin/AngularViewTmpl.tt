@@ -1,3 +1,8 @@
 ﻿<#@ template language="C#" #>
-<#@ output extension=".js" #>
-alert("hello");
+<#@ parameter type="System.String" name="Html"#>
+
+(function(){
+	var _index = window.angular.callbacks.counter.toString(36) - 1;
+	var _html='<#=Html#>';
+	window.angular.callbacks['_' + _index](_html);
+})();
