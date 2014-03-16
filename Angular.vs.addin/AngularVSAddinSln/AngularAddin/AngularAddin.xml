@@ -103,12 +103,6 @@
             <summary>The object for implementing an Add-in.</summary>
             <seealso class='IDTExtensibility2' />
         </member>
-        <member name="M:AngularAddin.Connect.Display(System.String)">
-            <summary>
-            向output中输出消息
-            </summary>
-            <param name="message"></param>
-        </member>
         <member name="M:AngularAddin.Connect.#ctor">
             <summary>Implements the constructor for the Add-in object. Place your initialization code within this method.</summary>
         </member>

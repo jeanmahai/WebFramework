@@ -51,7 +51,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="abc.agv.htm" />
+    <Content Include="abc.agv.js">
+      <DependentUpon>abc.agv.htm</DependentUpon>
+    </Content>
     <Content Include="AngularView.agv.htm" />
+    <Content Include="AngularView.agv.js">
+      <DependentUpon>AngularView.agv.htm</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
