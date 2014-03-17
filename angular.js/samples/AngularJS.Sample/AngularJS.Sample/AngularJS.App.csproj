@@ -51,6 +51,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="readme.txt" />
     <Content Include="www\index.htm" />
     <Content Include="www\jsonData\UsersListHandler.js" />
     <Content Include="www\jsonData\users.js" />
@@ -63,13 +64,13 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="www\MultipleView\a.agv.htm" />
     <Content Include="www\MultipleView\app.js" />
     <Content Include="www\MultipleView\constroller.js" />
-    <Content Include="www\MultipleView\details.js" />
-    <Content Include="www\MultipleView\list.js" />
-    <Content Include="www\MultipleView\details.htm" />
+    <Content Include="www\MultipleView\details.agv.htm" />
     <Content Include="www\MultipleView\layout.htm" />
-    <Content Include="www\MultipleView\list.htm" />
+    <Content Include="www\MultipleView\list.agv.htm" />
+    <Content Include="www\MultipleView\list.agv.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -80,7 +80,7 @@
     <Content Include="AngularAddin.AddIn">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="C:\Users\Jeanma\Documents\Visual Studio 2010\Addins\AngularAddin - For Testing.AddIn">
+    <Content Include="C:\Users\jm96\Documents\Visual Studio 2010\Addins\AngularAddin - For Testing.AddIn">
       <Link>AngularAddin - For Testing.AddIn</Link>
       <SubType>Designer</SubType>
     </Content>
