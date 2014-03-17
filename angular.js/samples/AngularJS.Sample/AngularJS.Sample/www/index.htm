@@ -88,7 +88,7 @@
                     delete window.userCallback;
                 };
 
-                
+
 
             } ]);
             app.controller("RemoteDataCtrl", ["$scope", "$http", function ($scope, $http) {
@@ -132,6 +132,42 @@
                 </td>
             </tr>
         </table>
+    </div>
+    <div>
+        <h6>
+            step 5:multiple view (以JSONP的方式切换view)</h6>
+        <a href="MultipleView/layout.htm">layout.htm</a>
+        <p>jsonp离线view的自动生成,可以使用AngularAddin插件</p>
+    </div>
+    <div>
+        <script type="text/javascript">
+            function formUserCtrl($scope) {
+                $scope.data = {};
+                $scope.update = function (user) {
+                    $scope.data = angular.copy(user);
+                    console.info(user);
+                };
+                $scope.reset = function () {
+                    $scope.user = {};
+                };
+            }
+        </script>
+        <h6>
+            step 6:form</h6>
+        <form ng-controller="formUserCtrl">
+        <ul>
+            <li>Name:<input type="text" ng-model="user.name" /></li>
+            <li>Sex:<input type="radio" ng-model="user.sex" value="male" />male
+                <input type="radio" ng-model="user.sex" value="female" />female</li>
+            <li>Age:<input type="text" ng-model="user.age" /></li>
+            <li>
+                <button ng-click="update(user)">
+                    save</button>
+                <button ng-click="reset()">
+                        reset</button></li>
+        </ul>
+        <pre>{{user|json}}</pre>
+        </form>
     </div>
 </body>
 </html>
