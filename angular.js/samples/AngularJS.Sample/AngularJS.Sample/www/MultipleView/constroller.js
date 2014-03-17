@@ -10,4 +10,12 @@ userControllers.controller("UserListCtrl", ["$scope", "$http", function ($scope,
 
 userControllers.controller("UserDetailsCtrl", ["$scope", "$routeParams", function ($scope, $routeParams) {
     $scope.id = $routeParams.id;
+
+    console.info($scope);
+
+    $scope.$on("$viewContentLoaded", function (name, listener) {
+        console.info(name);
+        console.info(listener);
+        console.info("view content loaded.");
+    });
 } ]);
