@@ -155,19 +155,23 @@
         <h6>
             step 6:form</h6>
         <form ng-controller="formUserCtrl">
-        <ul>
-            <li>Name:<input type="text" ng-model="user.name" /></li>
-            <li>Sex:<input type="radio" ng-model="user.sex" value="male" />male
-                <input type="radio" ng-model="user.sex" value="female" />female</li>
-            <li>Age:<input type="text" ng-model="user.age" /></li>
-            <li>
-                <button ng-click="update(user)">
-                    save</button>
-                <button ng-click="reset()">
+            <ul>
+                <li>Name:<input type="text" ng-model="user.name" /></li>
+                <li>Sex:<input type="radio" ng-model="user.sex" value="male" />male
+                    <input type="radio" ng-model="user.sex" value="female" />female</li>
+                <li>Age:<input type="text" ng-model="user.age" /></li>
+                <li>
+                    <button ng-click="update(user)">
+                        save</button>
+                    <button ng-click="reset()">
                         reset</button></li>
-        </ul>
-        <pre>{{user|json}}</pre>
+            </ul>
+            <pre>{{user|json}}</pre>
         </form>
+    </div>
+    <div>
+        <h6>
+            step 7:JSONP 不能操作http headers</h6>
     </div>
 </body>
 </html>
